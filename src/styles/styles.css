@@ -1,0 +1,279 @@
+/* Ustawienie podstawowych stylów dla wszystkich elementów */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: system-ui;
+}
+
+/* SEKCJA NAGŁÓWKA */
+.header {
+  background-color: #efb954;
+  z-index: 1;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.woof {
+  font-size: 20px;
+  color: #1f1d2b;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.icon-paw {
+  font-size: 25px;
+  margin-right: 10px;
+  color: #3a8fb3;
+}
+
+/* SEKCJA STOPKI */
+
+.footer {
+  background-color: #efba54;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.icon {
+  margin: 0 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: #1d202b;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+}
+
+.icon.active {
+  color: #3a8fb3;
+  transform: scale(1.5);
+}
+
+/* SEKCJA HOME */
+
+.root-container-home {
+  background-color: #1f1d2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.dog-list:before {
+  content: "Lista ras";
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+.list-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 150px 0 100px 0;
+  text-align: left;
+}
+
+.dog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dog-list-item {
+  color: #8f8e95;
+  font-size: 20px;
+  line-height: 2.5;
+  margin-left: 50px;
+  list-style: none;
+}
+
+.dog-list-item a {
+  text-decoration: none;
+  color: #8f8e95;
+}
+
+.dog-list-item a:hover {
+  color: #efba54;
+}
+
+/* SEKCJA SEARCH */
+.root-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1f1d2b;
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+}
+
+.search-form-container {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.search-input {
+  margin-right: 20px;
+  padding: 8px;
+}
+
+.search-button {
+  padding: 12px 40px;
+  background-color: #3a8fb3;
+  color: #1f1d2b;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search-button:hover {
+  background-color: #4ec2f3;
+}
+
+.search-input {
+  padding: 0.8rem;
+  width: 14rem;
+}
+
+/* KARTA RASY */
+
+.dog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
+  height: 100%;
+}
+
+.dog-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 16px;
+  margin-top: 15px;
+}
+
+.breed-name {
+  color: #3a8fb3;
+  font-size: 24px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.breed-description {
+  color: #ccc;
+  text-align: left;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.no-breed-info {
+  color: #3a8fb3;
+  font-size: 18px;
+}
+
+.no-breed-name {
+  color: red;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* MEDIA QUERIES */
+
+/* Stylowanie dla urządzeń o szerokości do 768px */
+@media (max-width: 768px) {
+  .root-container {
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+  }
+  .search-form-container {
+    margin-bottom: -40px;
+  }
+  .list-container {
+    padding: 120px 0 100px 0;
+  }
+
+  .search-input {
+    width: 12rem;
+  }
+
+  .search-button {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  .dog-image {
+    margin-top: 50px;
+  }
+
+  .breed-name {
+    font-size: 20px;
+  }
+
+  .breed-description {
+    font-size: 16px;
+  }
+}
+
+/* Stylowanie dla urządzeń o szerokości do 480px */
+@media (max-width: 480px) {
+  .root-container {
+    padding-top: 7rem;
+  }
+  .search-form-container {
+    margin-bottom: -50px;
+  }
+
+  .list-container {
+    padding: 120px 0 100px 0;
+  }
+
+  .dog-card {
+    max-width: 95%;
+  }
+
+  .search-input {
+    width: 10rem;
+  }
+
+  .search-button {
+    padding: 8px 25px;
+    font-size: 14px;
+  }
+  .dog-image {
+    transform: scale(0.8);
+  }
+
+  .breed-name {
+    font-size: 18px;
+  }
+
+  .breed-description {
+    font-size: 14px;
+  }
+}
